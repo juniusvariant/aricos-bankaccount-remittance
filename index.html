@@ -591,7 +591,7 @@ POST https://dev-bankaccount.aricos.co.id/oauth/token
 <p>Your balance refers to stored value in your Aricos account which can be sent out in remittances or withdrawn. Before you do any remittances, you will first have to add to your account balance (&quot;prefund&quot;). You can do this by transferring funds to Aricos&#39;s bank accounts. You can will get information about our bank account from our team so you can do prefund. After you have transferred the funds, please save the proof of transfer.</p>
 
 <p>If you have prefunding to your account, the balance should be detected and updated in your account in 15-30 minutes. If prefunding failed or have technical issues, please contact our support team with the proof of transfer to complete the prefund.</p>
-<h2 id='get-balance'>Get Balance</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>POST https://dev.aricos.co.id/api/v1/mitra/balance?account_type<span class="o">={</span>account_type<span class="o">}</span>
+<h2 id='get-balance'>Get Balance</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>GET https://dev-bankaccount.aricos.co.id/api/user-balances
 </code></pre></div>
 <p>Retrieves your account balance. There are two balances: <b>CASH</b> refers to funds available for you to remit or withdraw. <b>HOLDING</b> refers to funds which are in transit.</p>
 <h2 id='get-balance-request'>Get Balance Request</h2>
@@ -676,7 +676,7 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 <blockquote>
 <p>Create Customer Example Request:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://dev-bankaccount.aricos.co.id/api/user-balances'</span> <span class="se">\</span>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://dev.aricos.co.id/api/v1/customer/register'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 <span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> <span class="se">\</span>
 <span class="nt">--data-raw</span> <span class="s1">'{
