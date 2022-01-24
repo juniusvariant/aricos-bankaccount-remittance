@@ -106,8 +106,6 @@ All information about your account and password will be provide by our support t
 ## Account Login
 
 ```shell
-# With shell, you can just pass the correct header with each request
-
 POST https://dev-bankaccount.aricos.co.id/oauth/token
 ```
 
