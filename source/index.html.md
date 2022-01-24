@@ -180,7 +180,7 @@ If you have prefunding to your account, the balance should be detected and updat
 ## Get Balance
 
 ```shell
-POST https://dev.aricos.co.id/api/v1/mitra/balance?account_type={account_type}
+GET https://dev-bankaccount.aricos.co.id/api/user-balances
 ```
 
 Retrieves your account balance. There are two balances: <b>CASH</b> refers to funds available for you to remit or withdraw. <b>HOLDING</b> refers to funds which are in transit.
@@ -260,7 +260,7 @@ Create customer for your end-customers for the sender and recipient.
 > Create Customer Example Request:
 
 ```shell
-curl --location --request POST 'https://dev-bankaccount.aricos.co.id/api/user-balances' \
+curl --location --request POST 'https://dev.aricos.co.id/api/v1/customer/register' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --data-raw '{
