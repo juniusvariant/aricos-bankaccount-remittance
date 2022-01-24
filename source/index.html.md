@@ -428,7 +428,7 @@ DUPLICATE_CUSTOMER_ERROR</br> <span class="badge">400</span>| The external_id en
 Updates an existing customer
 
 ```shell
-PUT https://dev.aricos.co.id/api/v1/customer/update/{reference_id}
+PUT https://dev-bankaccount.aricos.co.id/api/customers/{reference_id}
 ```
 
 > Update Customer Example Request:
@@ -603,7 +603,7 @@ CUSTOMER_NOT_FOUND_ERROR</br> <span class="badge">400</span>| Could not find cus
 ## Get Customer With external_id Request
 
 ```shell
-GET https://dev.aricos.co.id/api/v1/customer/search/{reference_id}
+GET https://dev-bankaccount.aricos.co.id/api/customers/{reference_id}
 ```
 
 Returns an array with a single object which contains the customer corresponding to the unique external_id. Returns an empty array if there is no customer corresponding to the external_id.
@@ -611,8 +611,9 @@ Returns an array with a single object which contains the customer corresponding 
 > Get Customer With external_id Example Request:
 
 ```shell
-curl https://dev.aricos.co.id/api/v1/customer/search/r-1234 -X GET \
-  -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1NzI4NTA0ODMsImV4cCI6MTU3Mjg1NDA4MywibmJmIjoxNTcyODUwNDgzLCJqdGkiOiJNOEVqcmFTQlJsbWt3RGxzIiwic3ViIjoiNWRiZmNiMzE5MzgxODU3NTFmIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.mkZN7ipwisjUZcNJWthcIJvyUJGYvcy9BctEv8V6WMU'
+curl --location --request GET 'https://dev-bankaccount.aricos.co.id/api/customers/x-7986' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NGM5MjY0OS1hZTA2LTRmNmUtYjAzYi1iNWE0MzI3ZDBhNDgiLCJqdGkiOiJjNWMxNzVjMDAwOTE3ZjM3NmFlODQxN2YyNzExNzM0YzEyZTExYmIxOGNkNzBlYTMzZjRiMzM5MThmODQ5ZGIwMWMyNTA4ODI0NWEzN2M1NyIsImlhdCI6MTY0MjczMzE2Mi4yMTg2NTksIm5iZiI6MTY0MjczMzE2Mi4yMTg2NjcsImV4cCI6MTY3NDI2OTE2Mi4xOTA4NzUsInN1YiI6ImFlMzYwZjk2LWNkMjYtNGVlYy1hNzFlLTk1MTZkN2YzZjUwYSIsInNjb3BlcyI6W119.SSWzHI2hOKtWDzzwUCTqrZzs7uXK132BXmw5h_yDkIpAKQa91TdxdMTU-VhWMunmsQ8aAHRB2tlj-lyQk5P1XYXqeXCpajKgLHIL-P-r7PkXdHQmg8l8qamy_Vrz26zCtuSgD7YhqaTax7IxEXQL4mR9ixZnJ2wvUWz-lDIV0AbxxB5uQqspYcq-8kRjgMEr_wJvPcNW7gg9cPpznHIMcKP5XKpjjzvkn0LxKDkVB5mnAESpknchTdaMIeqFRQ_u3-kLuIm3Qp7Ri-4iiDY4I0N0MqGH93i-W-bOeF_MVI-CIa0AwLuBac-7gnsCVoxfi5QwJrs-pf1VbwsTTw6RSyxnFhp_DDiwC2pZFkoeyIu5hqPgq-u40wWsdHhCmXrurZJVntRDeMER_aC6nIo5WrMxSb_taqYLrzxuQ_ytht8N9ftkcIGt12xpp10jMcNzpECs5Of1Oc8cz5GudgkwOCpX98btstkVYjG-nu_QU0FI_Fxpv-XGGBJ6sbR9ZY96FRBLmjMfUEX7HPQ-HDo44TonabBvv0UhiEbTTYYman0F9PHWRctuc5Xi31m8fnWpOlRcr5dHKmOqxa2YTZgSzhMsZw2gAOXhmH49ef4TNm3ly2bbMHZqDcx6GwTa-rdIK2TZ4uXU9MwZ6fWliu3O5oKOYu2dcLQLBZyeN_BOPak'
 ```
 
 Query Parameter | Description
@@ -688,7 +689,7 @@ Our Bank Account Remittance APIs allow you to send remittances from your Aricos 
 ## Create Remittance
 
 ```shell
-POST https://dev-bankaccount.aricos.co.id/api/customers
+POST https://dev-bankaccount.aricos.co.id/api/remittances
 ```
 
 Sends a new remittance from your Aricos Account to a recipient. You’ll need to have created a customer representing the sender and a customer representing the recipient first.
@@ -700,24 +701,20 @@ Your Aricos account balance must be able to cover the payout amount and the tran
 > Create Remittance Example Request:
 
 ```shell
-curl --location --request POST 'https://dev-bankaccount.aricos.co.id/api/customers' \
-
+curl --location --request POST 'https://dev-bankaccount.aricos.co.id/api/remittances' \
 --header 'Content-Type: application/json' \
-
 --header 'Accept: application/json' \
-
---header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NGM5MjY0OS1hZTA2LTRmNmUtYjAzYi1iNWE0MzI3ZDBhNDgiLCJqdGkiOiJmMWU5NmVkZThkMmViMzgwMjk5MGMxOGYwYTBiOTAyNTlkOGYxMGM3MTZmNjk1MDRjOTNkMzQyYmVhMTRlZWE3YTQ1OGM5ZjdlNWE1MjFjNCIsImlhdCI6MTY0MTQ3MjI1NS4xNzYzMTYsIm5iZiI6MTY0MTQ3MjI1NS4xNzYzMjUsImV4cCI6MTY3MzAwODI1NS4xNTUxMDIsInN1YiI6ImFlMzYwZjk2LWNkMjYtNGVlYy1hNzFlLTk1MTZkN2YzZjUwYSIsInNjb3BlcyI6W119.rRZS87lN6iILggqSD_QNID-P75whUCdiwJoK6YOjeRFucjaSMPuwLqtW9ihhPg8Ns5Zj6COsRangUvh1UVjCi7lK58z2_dVrQYjqdLN4_Sm-u6i6i_l8YrPpGhde1FjojXJh-_Ld9gHSAK5uSWNjivr2dWkwnPGBOAoJzv6kO8SCBjMdgPO8G_g23nDQcCnejKS91ot09_AUXZq59LaLnmsnFcgn5c6wY56pCMr-gAcSzOVbafoQxOpZs2mxbBDYyEMb0wS2Ne87_-aqFOPYOivCYAhr8e3Nv7EyuEGsgGtKRibHo2adrOpgK8lS8oOZUdYZYnhO9ItXyEG5trb50jtHitLJFdYCYibaIDSZpcmv_7oq3hmsSzbkuj4bO1MOzPWXPWYRS0gZjZq5K7CXBdru1VLszhbtnFCMxMGJsskMsT0pQiyWhdOFQuVICwpQ1H1l8zGpIqq2qd5jPxiMQ6PCcWyc4caqYri5uMdH_j7K6ji0Q6h6FuWP_hJ2M50mqJeJO2FMKuqq_Io1S6ZpfNx_0er0-LbpgRI76N4t7uREej9CgLXDZeV5Zq2lnbCZT7mwFSZdaYASIGt7u4d56GUXYHH76P_4Zc8GafkxCcvak8FgkhWSOeIax3b5cHzIprEOhWd-5LNGJQsJhXKr4S5MIc0BXsneOng5CKBBF9g' \
-
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NGM5MjY0OS1hZTA2LTRmNmUtYjAzYi1iNWE0MzI3ZDBhNDgiLCJqdGkiOiJjNWMxNzVjMDAwOTE3ZjM3NmFlODQxN2YyNzExNzM0YzEyZTExYmIxOGNkNzBlYTMzZjRiMzM5MThmODQ5ZGIwMWMyNTA4ODI0NWEzN2M1NyIsImlhdCI6MTY0MjczMzE2Mi4yMTg2NTksIm5iZiI6MTY0MjczMzE2Mi4yMTg2NjcsImV4cCI6MTY3NDI2OTE2Mi4xOTA4NzUsInN1YiI6ImFlMzYwZjk2LWNkMjYtNGVlYy1hNzFlLTk1MTZkN2YzZjUwYSIsInNjb3BlcyI6W119.SSWzHI2hOKtWDzzwUCTqrZzs7uXK132BXmw5h_yDkIpAKQa91TdxdMTU-VhWMunmsQ8aAHRB2tlj-lyQk5P1XYXqeXCpajKgLHIL-P-r7PkXdHQmg8l8qamy_Vrz26zCtuSgD7YhqaTax7IxEXQL4mR9ixZnJ2wvUWz-lDIV0AbxxB5uQqspYcq-8kRjgMEr_wJvPcNW7gg9cPpznHIMcKP5XKpjjzvkn0LxKDkVB5mnAESpknchTdaMIeqFRQ_u3-kLuIm3Qp7Ri-4iiDY4I0N0MqGH93i-W-bOeF_MVI-CIa0AwLuBac-7gnsCVoxfi5QwJrs-pf1VbwsTTw6RSyxnFhp_DDiwC2pZFkoeyIu5hqPgq-u40wWsdHhCmXrurZJVntRDeMER_aC6nIo5WrMxSb_taqYLrzxuQ_ytht8N9ftkcIGt12xpp10jMcNzpECs5Of1Oc8cz5GudgkwOCpX98btstkVYjG-nu_QU0FI_Fxpv-XGGBJ6sbR9ZY96FRBLmjMfUEX7HPQ-HDo44TonabBvv0UhiEbTTYYman0F9PHWRctuc5Xi31m8fnWpOlRcr5dHKmOqxa2YTZgSzhMsZw2gAOXhmH49ef4TNm3ly2bbMHZqDcx6GwTa-rdIK2TZ4uXU9MwZ6fWliu3O5oKOYu2dcLQLBZyeN_BOPak' \
 --data-raw '{
-"external_id": "XXX-10",
-"method": "A2A",
-"amount": 300000,
-"purpose_code": "FAMILY",
-"source_of_funds": "PERSONAL_SAVINGS",
-"description": "Transfer ke kampung via Bank Account",
-"sender_customer_id": "95083094-4d00-42e2-8f8a-d1765ac46592",
-"recipient_customer_id": "9508308d-12c8-4cb2-866d-f31b35342089",
-"agent_id": "e8f04b8b-244a-4a92-8175-0b8b5b40c3d0"
+    "reference_id": "XXX-3344",
+    "method": "A2C",
+    "amount": 50000,
+    "purpose_code": "FAMILY",
+    "source_of_funds": "PERSONAL_SAVINGS",
+    "description": "Transfer untuk ibu",
+    "sender_customer_id": "9564d736-8852-4e4a-ad8a-0f40d14acb69",
+    "recipient_customer_id": "9564d7a6-f5d3-4dd4-911f-4d13144e8311",
+    "agent_id": "0620b618-b2ab-46cf-ab23-679a78945b5e"
 }'
    ```
 
@@ -881,7 +878,7 @@ SERVER_ERROR</br> <span class="badge">500</span>| Error connecting to our server
 ## Get Remittance With external_id Request
 
 ```shell
-GET https://dev.aricos.co.id/api/v1/remittance/check-v2/{external_id}
+GET https://dev-bankaccount.aricos.co.id/api/remittances/{external_id}
 ```
 
 Returns an array with a single object which contains the remittance corresponding to the unique external_id. Returns an empty array if there is no remittance corresponding to the external_id.
@@ -889,8 +886,9 @@ Returns an array with a single object which contains the remittance correspondin
 > Get Customer With external_id Example Request:
 
 ```shell
-curl https://dev.aricos.co.id/api/v1/remittance/check-v2/{external_id} -X GET \
-  -H 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1NzI4NTA0ODMsImV4cCI6MTU3Mjg1NDA4MywibmJmIjoxNTcyODUwNDgzLCJqdGkiOiJNOEVqcmFTQlJsbWt3RGxzIiwic3ViIjoiNWRiZmNiMzE5MzgxODU3NTFmIiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.mkZN7ipwi’
+curl --location --request GET 'https://dev-bankaccount.aricos.co.id/api/remittances/XXX-2233' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NGM5MjY0OS1hZTA2LTRmNmUtYjAzYi1iNWE0MzI3ZDBhNDgiLCJqdGkiOiJjNWMxNzVjMDAwOTE3ZjM3NmFlODQxN2YyNzExNzM0YzEyZTExYmIxOGNkNzBlYTMzZjRiMzM5MThmODQ5ZGIwMWMyNTA4ODI0NWEzN2M1NyIsImlhdCI6MTY0MjczMzE2Mi4yMTg2NTksIm5iZiI6MTY0MjczMzE2Mi4yMTg2NjcsImV4cCI6MTY3NDI2OTE2Mi4xOTA4NzUsInN1YiI6ImFlMzYwZjk2LWNkMjYtNGVlYy1hNzFlLTk1MTZkN2YzZjUwYSIsInNjb3BlcyI6W119.SSWzHI2hOKtWDzzwUCTqrZzs7uXK132BXmw5h_yDkIpAKQa91TdxdMTU-VhWMunmsQ8aAHRB2tlj-lyQk5P1XYXqeXCpajKgLHIL-P-r7PkXdHQmg8l8qamy_Vrz26zCtuSgD7YhqaTax7IxEXQL4mR9ixZnJ2wvUWz-lDIV0AbxxB5uQqspYcq-8kRjgMEr_wJvPcNW7gg9cPpznHIMcKP5XKpjjzvkn0LxKDkVB5mnAESpknchTdaMIeqFRQ_u3-kLuIm3Qp7Ri-4iiDY4I0N0MqGH93i-W-bOeF_MVI-CIa0AwLuBac-7gnsCVoxfi5QwJrs-pf1VbwsTTw6RSyxnFhp_DDiwC2pZFkoeyIu5hqPgq-u40wWsdHhCmXrurZJVntRDeMER_aC6nIo5WrMxSb_taqYLrzxuQ_ytht8N9ftkcIGt12xpp10jMcNzpECs5Of1Oc8cz5GudgkwOCpX98btstkVYjG-nu_QU0FI_Fxpv-XGGBJ6sbR9ZY96FRBLmjMfUEX7HPQ-HDo44TonabBvv0UhiEbTTYYman0F9PHWRctuc5Xi31m8fnWpOlRcr5dHKmOqxa2YTZgSzhMsZw2gAOXhmH49ef4TNm3ly2bbMHZqDcx6GwTa-rdIK2TZ4uXU9MwZ6fWliu3O5oKOYu2dcLQLBZyeN_BOPak'
 ```
 
 > Get Remittance With external_id Example Response:
