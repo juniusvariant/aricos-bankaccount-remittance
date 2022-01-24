@@ -57,7 +57,7 @@ Before you access all our features, you have to register your account to access 
 
 To successfully authenticate with Aricos's API, you must append a colon and Base 64 encode the API key. All API requests should be made over HTTPS instead of HTTP (all calls made over plain HTTP will fail).
 
-You can access our development end-point url to <span style="color:blue"> https://dev.aricos.co.id </span> and production end-point url to <span style="color:blue"> https://aricos.co.id </span>.
+You can access our development end-point url to <span style="color:blue"> https://dev-bankaccount.aricos.co.id </span> and production end-point url to <span style="color:blue"> https://bankaccount.aricos.co.id </span>.
 
 ## Start Testing!
 
@@ -71,7 +71,7 @@ The following is an outline of actions to get started with Postman.
 
 1. Install [Postman](https://www.getpostman.com/).
 
-2. Download our <a href="https://github.com/juniusvariant/aricos-bankaccount-remittance/raw/main/source/images/logo.png" download> Postman collection</a>.
+2. Download our <a href="https://s.id/-Tcoq" download> Postman collection</a>.
 
 3. Open Postman and Import the Aricos API Postman Collection.
 
