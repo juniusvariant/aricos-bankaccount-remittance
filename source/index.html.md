@@ -252,7 +252,7 @@ Use the following Customers API to manage your customers with Aricos. Your custo
 ```shell
 POST https://dev-bankaccount.aricos.co.id/api/customers
 ```
-</br></br>
+
 Create customer for your end-customers for the sender and recipient.
 
 > Create Customer Example Request:
