@@ -57,7 +57,12 @@ Before you access all our features, you have to register your account to access 
 
 To successfully authenticate with Aricos's API, you must append a colon and Base 64 encode the API key. All API requests should be made over HTTPS instead of HTTP (all calls made over plain HTTP will fail).
 
-You can access our development end-point url to <span style="color:blue"> https://dev-bankaccount.aricos.co.id </span> and production end-point url to <span style="color:blue"> https://bankaccount.aricos.co.id </span>.
+You can access our end-point url to:
+
+Info | Url
+--------- | -----------
+Development | <span style="color:blue"> https://dev-cashpickup.aricos.co.id </span>
+Production | <span style="color:blue"> https://cashpickup.aricos.co.id </span>
 
 ## Start Testing!
 
