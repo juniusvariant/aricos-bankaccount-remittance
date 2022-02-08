@@ -505,7 +505,6 @@ occupation </br><small><span style="color:grey">*required* </span></small>| `str
 business_name </br><small><span style="color:grey">*conditionally required* </span></small>| `string` Required if `customer_type` is `BUSINESS`. Only allowed if `customer_type` is `BUSINESS`
 address </br><small><span style="color:grey">*optional* </span></small>| `object` Customer's address
 address.country_code </br><small><span style="color:grey">*required* </span></small>| `string` Customer’s country. 2-letter ISO 3166-2 country code. Refer to code standard [here](https://www.nationsonline.org/oneworld/country_code_list.htm). If `customer_type` is `BUSINESS`, the country in which the corporate entity is registered. If `customer_type` is `INDIVIDUAL`, a country in which the customer holds nationality
-address.state </br><small><span style="color:grey">*optional* </span></small>| `string` Customer’s state. Download [here](https://www.nationsonline.org/oneworld/country_code_list.htm)
 address.province </br><small><span style="color:grey">*required* </span></small>| `string` Customer’s province. Download list [here](https://www.nationsonline.org/oneworld/country_code_list.htm)
 address.city </br><small><span style="color:grey">*required* </span></small>| `string` Customer’s city. Download list [here](https://www.nationsonline.org/oneworld/country_code_list.htm)
 address.district </br><small><span style="color:grey">*optional* </span></small>| `string` Customer’s district. Download list [here](https://www.nationsonline.org/oneworld/country_code_list.htm)
