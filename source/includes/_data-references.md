@@ -205,8 +205,7 @@ KTP | Kartu Tanda Penduduk (national identity card number) of the customer
 NPWP | Nomor Pokok Wajib Pajak (tax number) of the customer
 SIM | Surat Izin Mengemudi (driver’s licence) of the customer
 PASSPORT | Passport of the customer
-KITAS | Kartu Izin Tinggal Sementara (Temporary Stay/Resident Permit Card) of the customer
-KITAP | Kartu Izin Tinggal Tetap (Permanent Stay/Resident Permit Card) of the customer
+OTHER | Other identification type of the customer
 
 ## Occupation Codes
 
