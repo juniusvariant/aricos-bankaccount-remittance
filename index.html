@@ -765,8 +765,8 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 <td><code>string</code> Legal entity. Valid values: <code>INDIVIDUAL</code> or <code>BUSINESS</code></td>
 </tr>
 <tr>
-<td>given_name </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
-<td><code>string</code> Given name(s). Required if <code>customer_type</code> is <code>INDIVIDUAL</code>. Only allowed if <code>customer_type</code> is <code>INDIVIDUAL</code></td>
+<td>given_name </br><small><span style="color:grey"><em>required</em> </span></small></td>
+<td><code>string</code> Given name(s). Mandatory for <code>customer_type</code> is <code>INDIVIDUAL</code> and <code>BUSINESS</code></td>
 </tr>
 <tr>
 <td>surname </br><small><span style="color:grey"><em>required</em> </span></small></td>
@@ -783,10 +783,6 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 <tr>
 <td>occupation </br><small><span style="color:grey"><em>required</em> </span></small></td>
 <td><code>string</code> Occupation of the Customer. See <a href="#occupation-codes">Occupation Codes</a></td>
-</tr>
-<tr>
-<td>business_name </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
-<td><code>string</code> Required if <code>customer_type</code> is <code>BUSINESS</code>. Only allowed if <code>customer_type</code> is <code>BUSINESS</code></td>
 </tr>
 <tr>
 <td>address </br><small><span style="color:grey"><em>optional</em> </span></small></td>
@@ -1068,8 +1064,8 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 <td><code>string</code> Legal entity. Valid values: <code>INDIVIDUAL</code> or <code>BUSINESS</code></td>
 </tr>
 <tr>
-<td>given_name </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
-<td><code>string</code> Given name(s). Required if <code>customer_type</code> is <code>INDIVIDUAL</code>. Only allowed if <code>customer_type</code> is <code>INDIVIDUAL</code></td>
+<td>given_name </br><small><span style="color:grey"><em>required</em> </span></small></td>
+<td><code>string</code> Given name(s). Mandatory for <code>customer_type</code> is <code>INDIVIDUAL</code> and <code>BUSINESS</code></td>
 </tr>
 <tr>
 <td>surname </br><small><span style="color:grey"><em>required</em> </span></small></td>
@@ -1086,10 +1082,6 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 <tr>
 <td>occupation </br><small><span style="color:grey"><em>required</em> </span></small></td>
 <td><code>string</code> Occupation of the Customer. See <a href="#occupation-codes">Occupation Codes</a></td>
-</tr>
-<tr>
-<td>business_name </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
-<td><code>string</code> Required if <code>customer_type</code> is <code>BUSINESS</code>. Only allowed if <code>customer_type</code> is <code>BUSINESS</code></td>
 </tr>
 <tr>
 <td>address </br><small><span style="color:grey"><em>optional</em> </span></small></td>
@@ -1432,11 +1424,11 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 </tr>
 <tr>
 <td>sender_customer_id </br><small><span style="color:grey"><em>required</em> </span></small></td>
-<td><code>string</code> The id of the sender customer (as returned by Aricos’s Create Customer endpoint).</br></br> The following fields are required in the sender customer object: <code>given_name</code> OR <code>business_name</code>, <code>customer_type</code>, <code>country_code</code></td>
+<td><code>string</code> The id of the sender customer (as returned by Aricos’s Create Customer endpoint).</br></br> The following fields are required in the sender customer object: <code>given_name</code>, <code>customer_type</code>, <code>country_code</code></td>
 </tr>
 <tr>
 <td>recipient_customer_id </br><small><span style="color:grey"><em>required</em> </span></small></td>
-<td><code>string</code> The id of the recipient customer (as returned by Aricos&#39;s Create Customer endpoint).</br></br> The following fields are required in the recipient customer object: <code>given_name</code> OR <code>business_name</code>, <code>customer_type</code>, <code>country_code</code>, <code>account_code</code>, <code>account_number</code>, <code>account_holder_name</code></td>
+<td><code>string</code> The id of the recipient customer (as returned by Aricos&#39;s Create Customer endpoint).</br></br> The following fields are required in the recipient customer object: <code>given_name</code>, <code>customer_type</code>, <code>country_code</code>, <code>account_code</code>, <code>account_number</code>, <code>account_holder_name</code></td>
 </tr>
 <tr>
 <td>source_of_funds </br><small><span style="color:grey"><em>required</em> </span></small></td>
