@@ -61,8 +61,8 @@ You can access our end-point url to:
 
 Info | Url
 --------- | -----------
-Development | <span style="color:blue"> https://dev-cashpickup.aricos.co.id </span>
-Production | <span style="color:blue"> https://cashpickup.aricos.co.id </span>
+Development | <span style="color:blue"> https://dev-bankaccount.aricos.co.id </span>
+Production | <span style="color:blue"> https://bankaccount.aricos.co.id </span>
 
 ## Start Testing!
 
