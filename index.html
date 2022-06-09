@@ -869,16 +869,16 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 <td><code>string</code> Customer’s email address. Recommended if you want to notify the customer of the transaction statusShould include the top-level domain name</br> Example: abc@email.com</td>
 </tr>
 <tr>
-<td>mobile </br><small><span style="color:grey"><em>optional</em> </span></small></td>
-<td><code>object</code> Customer’s mobile number.</td>
+<td>mobile </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
+<td><code>object</code> Customer’s mobile number. Required for <code>Recipient</code> in <code>Cash Pick Up</code> transaction.</td>
 </tr>
 <tr>
-<td>mobile.country_code </br><small><span style="color:grey"><em>optional</em> </span></small></td>
-<td><code>string</code> Customer’s mobile number international  country prefix. Recommended if you want to notify the customer of the transaction status</br></br> 2-letter ISO 3166-2 country code. Refer to code standard <a href="https://www.nationsonline.org/oneworld/country_code_list.htm">here</a>. Example: 62</td>
+<td>mobile.country_code </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
+<td><code>string</code> Customer’s mobile number international  country prefix. Recommended if you want to notify the customer of the transaction status</br></br> 2-letter ISO 3166-2 country code. Refer to code standard <a href="https://www.nationsonline.org/oneworld/country_code_list.htm">here</a>. Example: 62. Required for <code>Recipient</code> in <code>Cash Pick Up</code> transaction.</td>
 </tr>
 <tr>
-<td>mobile.number </br><small><span style="color:grey"><em>optional</em> </span></small></td>
-<td><code>string</code> Customer’s mobile number without international prefix. Recommended if you want to notify the customer of the transaction status</br> Example: 812XXXXXX</td>
+<td>mobile.number </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
+<td><code>string</code> Customer’s mobile number without international prefix. Recommended if you want to notify the customer of the transaction status</br> Example: 812XXXXXX. Required for <code>Recipient</code> in <code>Cash Pick Up</code> transaction.</td>
 </tr>
 <tr>
 <td>phone </br><small><span style="color:grey"><em>optional</em> </span></small></td>
@@ -1168,16 +1168,16 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 <td><code>string</code> Customer’s email address. Recommended if you want to notify the customer of the transaction statusShould include the top-level domain name</br> Example: abc@email.com</td>
 </tr>
 <tr>
-<td>mobile </br><small><span style="color:grey"><em>optional</em> </span></small></td>
-<td><code>object</code> Customer’s mobile number.</td>
+<td>mobile </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
+<td><code>object</code> Customer’s mobile number. Required for <code>Recipient</code> in <code>Cash Pick Up</code> transaction.</td>
 </tr>
 <tr>
-<td>mobile.country_code </br><small><span style="color:grey"><em>optional</em> </span></small></td>
-<td><code>string</code> Customer’s mobile number international  country prefix. Recommended if you want to notify the customer of the transaction status</br></br> 2-letter ISO 3166-2 country code. Refer to code standard <a href="https://www.nationsonline.org/oneworld/country_code_list.htm">here</a>. Example: 62</td>
+<td>mobile.country_code </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
+<td><code>string</code> Customer’s mobile number international  country prefix. Recommended if you want to notify the customer of the transaction status</br></br> 2-letter ISO 3166-2 country code. Refer to code standard <a href="https://www.nationsonline.org/oneworld/country_code_list.htm">here</a>. Example: 62. Required for <code>Recipient</code> in <code>Cash Pick Up</code> transaction.</td>
 </tr>
 <tr>
-<td>mobile.number </br><small><span style="color:grey"><em>optional</em> </span></small></td>
-<td><code>string</code> Customer’s mobile number without international prefix. Recommended if you want to notify the customer of the transaction status</br> Example: 812XXXXXX</td>
+<td>mobile.number </br><small><span style="color:grey"><em>conditionally required</em> </span></small></td>
+<td><code>string</code> Customer’s mobile number without international prefix. Recommended if you want to notify the customer of the transaction status</br> Example: 812XXXXXX. Required for <code>Recipient</code> in <code>Cash Pick Up</code> transaction.</td>
 </tr>
 <tr>
 <td>phone </br><small><span style="color:grey"><em>optional</em> </span></small></td>
