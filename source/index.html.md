@@ -603,10 +603,10 @@ CUSTOMER_NOT_FOUND_ERROR</br> <span class="badge">400</span>| Could not find cus
 ## Get Customer With reference_id Request
 
 ```shell
-GET https://dev-bankaccount.aricos.co.id/api/customers/{reference_id}
+GET https://dev-bankaccount.aricos.co.id/api/customers/__find-by?reference_id{reference_id}
 ```
 
-Returns an array with a single object which contains the customer corresponding to the unique external_id. Returns an empty array if there is no customer corresponding to the reference_id.
+Returns an array with a single object which contains the customer corresponding to the unique reference_id. Returns an empty array if there is no customer corresponding to the reference_id.
 
 > Get Customer With reference_id Example Request:
 
@@ -618,7 +618,7 @@ curl --location --request GET 'https://dev-bankaccount.aricos.co.id/api/customer
 
 Query Parameter | Description
 --------- | -----------
-reference_id </br><small><span style="color:grey">*optional* </span></small>| `string` Unique ID you provided in the Create Customer request</br> <span style="color:grey"><small>The external_id must match the external_id used at customer creation precisely</small></span>
+reference_id </br><small><span style="color:grey">*optional* </span></small>| `string` Unique ID you provided in the Create Customer request</br> <span style="color:grey"><small>The reference_id must match the reference_id used at customer creation precisely</small></span>
 
 > Get Customer With reference_id Example Response:
 
