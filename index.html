@@ -1290,9 +1290,9 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 <td>Could not find customer.</br> <span class="badge error">No retry</span></td>
 </tr>
 </tbody></table>
-<h2 id='get-customer-with-reference_id-request'>Get Customer With reference_id Request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>GET https://dev-bankaccount.aricos.co.id/api/customers/__find-by?reference_id<span class="o">{</span>reference_id<span class="o">}</span>
+<h2 id='get-customer-with-reference_id-request'>Get Customer With reference_id Request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>GET https://dev-bankaccount.aricos.co.id/api/customers/<span class="o">{</span>reference_id<span class="o">}</span>
 </code></pre></div>
-<p>Returns an array with a single object which contains the customer corresponding to the unique reference_id. Returns an empty array if there is no customer corresponding to the reference_id.</p>
+<p>Returns an array with a single object which contains the customer corresponding to the unique external_id. Returns an empty array if there is no customer corresponding to the reference_id.</p>
 
 <blockquote>
 <p>Get Customer With reference_id Example Request:</p>
@@ -1309,7 +1309,7 @@ account_type </br><small><span style="color:grey">*optional* </span></small> </b
 </thead><tbody>
 <tr>
 <td>reference_id </br><small><span style="color:grey"><em>optional</em> </span></small></td>
-<td><code>string</code> Unique ID you provided in the Create Customer request</br> <span style="color:grey"><small>The reference_id must match the reference_id used at customer creation precisely</small></span></td>
+<td><code>string</code> Unique ID you provided in the Create Customer request</br> <span style="color:grey"><small>The external_id must match the external_id used at customer creation precisely</small></span></td>
 </tr>
 </tbody></table>
 
